@@ -55,6 +55,10 @@ body {
   font-size: 14px;
 }
 
+.nav-1 ul li a:hover {
+  border-bottom: 1px solid white;
+}
+
 nav {
   height: 90px;
   display: flex;
@@ -69,6 +73,7 @@ nav ul {
 
 nav ul .green-letter {
   color: #1abc9c;
+  font-size: 32px;
 }
 
 nav ul li {
@@ -93,7 +98,7 @@ nav ul li:last-child {
 }
 
 nav ul li:last-child:hover a {
-  color: black;
+  color: #1abc9c;
 }
 
 nav ul li a {
@@ -118,6 +123,8 @@ nav ul li a:hover {
   text-align: center;
   font-size: 18px;
   background: url("../images/background-1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -158,6 +165,12 @@ nav ul li a:hover {
   font-family: "Roboto";
   text-transform: uppercase;
   margin-top: 10px;
+  transition: 0.4s;
+}
+
+.swiper-slide button:hover {
+  background-color: #1abc9c;
+  font-weight: bold;
 }
 
 .flex-about {
@@ -220,6 +233,11 @@ nav ul li a:hover {
 #collection .collection-products figure .image {
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+#collection .collection-products figure .image img {
+  vertical-align: middle;
 }
 
 #collection .collection-products figure figcaption {
@@ -245,6 +263,107 @@ nav ul li a:hover {
   background-color: #555252;
   opacity: 0.45;
   color: white;
+}
+
+#collection figure:hover .image::after {
+  content: "";
+  background-color: black;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.5s ease-in;
+  position: absolute;
+  z-index: 1;
+}
+
+#collection .shop-icon {
+  background: url("../images/add-to-cart.jpg");
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  height: 50px;
+  width: 165px;
+  z-index: 2;
+  opacity: 0;
+  background-reapat: no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#collection .shop-icon:hover {
+  transform: scale(1.1);
+}
+
+#collection figure:hover .shop-icon {
+  opacity: 1;
+}
+
+#collection .heart-icon {
+  background-image: url("../images/icon-heart.png");
+  position: absolute;
+  top: 122px;
+  left: 50px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  opacity: 0;
+  background-reapat: no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#collection .heart-icon:hover {
+  transform: scale(1.1);
+}
+
+#collection figure:hover .heart-icon {
+  opacity: 1;
+}
+
+#collection .connect-icon {
+  background-image: url("../images/icon-heart.png");
+  position: absolute;
+  top: 122px;
+  left: 106px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  opacity: 0;
+  background-reapat: no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#collection .connect-icon:hover {
+  transform: scale(1.1);
+}
+
+#collection figure:hover .connect-icon {
+  opacity: 1;
+}
+
+#collection .time-icon {
+  background-image: url("../images/icon-heart.png");
+  position: absolute;
+  top: 122px;
+  left: 163px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  opacity: 0;
+  background-reapat: no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#collection .time-icon:hover {
+  transform: scale(1.1);
+}
+
+#collection figure:hover .time-icon {
+  opacity: 1;
 }
 
 .title-section-green {
@@ -309,6 +428,10 @@ nav ul li a:hover {
   width: 25%;
 }
 
+.gallery figure .image img {
+  vertical-align: middle;
+}
+
 .gallery figure figcaption {
   display: flex;
   margin-bottom: 30px;
@@ -371,6 +494,10 @@ nav ul li a:hover {
 #sell-section .best-sellers figure .image {
   margin: 0;
   padding: 0;
+}
+
+#sell-section .best-sellers figure .image img {
+  vertical-align: middle;
 }
 
 #sell-section .best-sellers figure figcaption {
