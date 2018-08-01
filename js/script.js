@@ -4,3 +4,25 @@
           prevEl: '.swiper-button-prev'
       },
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //AOS plugin
+  AOS.init({
+      delay: 100
+  });

@@ -30,6 +30,7 @@
     "nu-html-checker": "^0.1.0"
   },
   "dependencies": {
+    "animate.css": "^3.7.0",
     "glob-run": "^0.1.6",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",

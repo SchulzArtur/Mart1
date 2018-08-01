@@ -178,6 +178,52 @@
         }
     }
 
+    .typewriter h2 {
+
+        overflow: hidden;
+        /* Ensures the content is not revealed until the animation */
+        white-space: nowrap;
+        /* Keeps the content on a single line */
+        margin: 0 auto;
+        /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em;
+        /* Adjust as needed */
+        animation: typing 2s steps(40, end);
+    }
+    /* The typing effect */
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 16%;
+        }
+    }
+
+    .typewriter h3 {
+
+        overflow: hidden;
+        /* Ensures the content is not revealed until the animation */
+        white-space: nowrap;
+        /* Keeps the content on a single line */
+        margin: 0 auto;
+        /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 1px;
+        /* Adjust as needed */
+        animation: typing 1.50s steps(40, end);
+    }
+    /* The typing effect */
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 30%;
+        }
+    }
+
     .flex-about {
         display: flex;
         padding-top: 100px;
@@ -386,41 +432,7 @@
         }
     }
 
-    .menu-products {
-        margin-bottom: 100px;
 
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            list-style-type: none;
-
-
-            li {
-                padding: 5px 15px;
-                border: 1px solid $greyColor;
-                margin: 0 8px;
-                cursor: pointer;
-                transition: 0.6s;
-                &:hover {
-                    background-color: $greenColor;
-                    a {
-                        color: white;
-                    }
-                }
-
-                a {
-                    text-decoration: none;
-                    color: $greyColor;
-                    font-family: $fontRoboto;
-                    font-weight: light;
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    transition: 0.3s;
-                }
-            }
-        }
-    }
 
     .gallery {
         display: flex;
@@ -428,6 +440,9 @@
         figure {
             width: 25%;
             .image {
+                position: relative;
+                padding: 0;
+                margin: 0;
                 img {
                     vertical-align: middle;
                 }
@@ -454,6 +469,100 @@
                     color: white;
                 }
             }
+        }
+        figure:hover .image::after {
+            content: "";
+            background-color: black;
+            opacity: 0.5;
+            width: 91%;
+            height: 100%;
+
+            left: 0;
+            top: 0;
+            transition: 0.5s ease-in;
+            position: absolute;
+            z-index: 1;
+        }
+
+
+        .shop-icon {
+            background: url("../images/add-to-cart.jpg");
+            position: absolute;
+            top: 180px;
+            left: 50px;
+            height: 50px;
+            width: 165px;
+            z-index: 2;
+            opacity: 0;
+            background-reapat: no-repeat;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        figure:hover .shop-icon {
+            opacity: 1;
+        }
+
+        .heart-icon {
+            background-image: url("../images/icon-heart.png");
+            position: absolute;
+            top: 122px;
+            left: 50px;
+            height: 50px;
+            width: 50px;
+            z-index: 2;
+            opacity: 0;
+            background-reapat: no-repeat;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        figure:hover .heart-icon {
+            opacity: 1;
+        }
+
+        .connect-icon {
+            background-image: url("../images/icon-heart.png");
+            position: absolute;
+            top: 122px;
+            left: 106px;
+            height: 50px;
+            width: 50px;
+            z-index: 2;
+            opacity: 0;
+            background-reapat: no-repeat;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        figure:hover .connect-icon {
+            opacity: 1;
+        }
+
+        .time-icon {
+            background-image: url("../images/icon-heart.png");
+            position: absolute;
+            top: 122px;
+            left: 163px;
+            height: 50px;
+            width: 50px;
+            z-index: 2;
+            opacity: 0;
+            background-reapat: no-repeat;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        figure:hover .time-icon {
+            opacity: 1;
         }
     }
 
@@ -488,6 +597,7 @@
                 .image {
                     margin: 0;
                     padding: 0;
+                    position: relative;
                     img {
                         vertical-align: middle;
                     }
@@ -517,6 +627,100 @@
                     }
                 }
             }
+        }
+        figure:hover .image::after {
+            content: "";
+            background-color: black;
+            opacity: 0.5;
+            width: 100%;
+            height: 100%;
+
+            left: 0;
+            top: 0;
+            transition: 0.5s ease-in;
+            position: absolute;
+            z-index: 1;
+        }
+
+
+        .shop-icon {
+            background: url("../images/add-to-cart.jpg");
+            position: absolute;
+            top: 180px;
+            left: 50px;
+            height: 50px;
+            width: 165px;
+            z-index: 2;
+            opacity: 0;
+            background-reapat: no-repeat;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        figure:hover .shop-icon {
+            opacity: 1;
+        }
+
+        .heart-icon {
+            background-image: url("../images/icon-heart.png");
+            position: absolute;
+            top: 122px;
+            left: 50px;
+            height: 50px;
+            width: 50px;
+            z-index: 2;
+            opacity: 0;
+            background-reapat: no-repeat;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        figure:hover .heart-icon {
+            opacity: 1;
+        }
+
+        .connect-icon {
+            background-image: url("../images/icon-heart.png");
+            position: absolute;
+            top: 122px;
+            left: 106px;
+            height: 50px;
+            width: 50px;
+            z-index: 2;
+            opacity: 0;
+            background-reapat: no-repeat;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        figure:hover .connect-icon {
+            opacity: 1;
+        }
+
+        .time-icon {
+            background-image: url("../images/icon-heart.png");
+            position: absolute;
+            top: 122px;
+            left: 163px;
+            height: 50px;
+            width: 50px;
+            z-index: 2;
+            opacity: 0;
+            background-reapat: no-repeat;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        figure:hover .time-icon {
+            opacity: 1;
         }
     }
 
@@ -803,5 +1007,41 @@
                     padding-right: 20px;
                 }
             }
+        }
+    }
+
+
+    #fadeinright {
+        @-webkit-keyframes fadeInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .fadeInRight {
+            -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
         }
     }

@@ -173,6 +173,50 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
+.typewriter h2 {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation: typing 2s steps(40, end);
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16%;
+  }
+}
+
+.typewriter h3 {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 1px;
+  /* Adjust as needed */
+  animation: typing 1.5s steps(40, end);
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30%;
+  }
+}
+
 .flex-about {
   display: flex;
   padding-top: 100px;
@@ -382,43 +426,6 @@ nav ul li a:hover {
   padding-bottom: 75px;
 }
 
-.menu-products {
-  margin-bottom: 100px;
-}
-
-.menu-products ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style-type: none;
-}
-
-.menu-products ul li {
-  padding: 5px 15px;
-  border: 1px solid #555252;
-  margin: 0 8px;
-  cursor: pointer;
-  transition: 0.6s;
-}
-
-.menu-products ul li:hover {
-  background-color: #1abc9c;
-}
-
-.menu-products ul li:hover a {
-  color: white;
-}
-
-.menu-products ul li a {
-  text-decoration: none;
-  color: #555252;
-  font-family: "Roboto";
-  font-weight: light;
-  font-size: 14px;
-  text-transform: uppercase;
-  transition: 0.3s;
-}
-
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -426,6 +433,12 @@ nav ul li a:hover {
 
 .gallery figure {
   width: 25%;
+}
+
+.gallery figure .image {
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
 
 .gallery figure .image img {
@@ -453,6 +466,107 @@ nav ul li a:hover {
   background-color: #555252;
   opacity: 0.45;
   color: white;
+}
+
+.gallery figure:hover .image::after {
+  content: "";
+  background-color: black;
+  opacity: 0.5;
+  width: 91%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.5s ease-in;
+  position: absolute;
+  z-index: 1;
+}
+
+.gallery .shop-icon {
+  background: url("../images/add-to-cart.jpg");
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  height: 50px;
+  width: 165px;
+  z-index: 2;
+  opacity: 0;
+  background-reapat: no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.gallery .shop-icon:hover {
+  transform: scale(1.1);
+}
+
+.gallery figure:hover .shop-icon {
+  opacity: 1;
+}
+
+.gallery .heart-icon {
+  background-image: url("../images/icon-heart.png");
+  position: absolute;
+  top: 122px;
+  left: 50px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  opacity: 0;
+  background-reapat: no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.gallery .heart-icon:hover {
+  transform: scale(1.1);
+}
+
+.gallery figure:hover .heart-icon {
+  opacity: 1;
+}
+
+.gallery .connect-icon {
+  background-image: url("../images/icon-heart.png");
+  position: absolute;
+  top: 122px;
+  left: 106px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  opacity: 0;
+  background-reapat: no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.gallery .connect-icon:hover {
+  transform: scale(1.1);
+}
+
+.gallery figure:hover .connect-icon {
+  opacity: 1;
+}
+
+.gallery .time-icon {
+  background-image: url("../images/icon-heart.png");
+  position: absolute;
+  top: 122px;
+  left: 163px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  opacity: 0;
+  background-reapat: no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.gallery .time-icon:hover {
+  transform: scale(1.1);
+}
+
+.gallery figure:hover .time-icon {
+  opacity: 1;
 }
 
 #sale {
@@ -494,6 +608,7 @@ nav ul li a:hover {
 #sell-section .best-sellers figure .image {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 #sell-section .best-sellers figure .image img {
@@ -523,6 +638,107 @@ nav ul li a:hover {
   background-color: #555252;
   opacity: 0.45;
   color: white;
+}
+
+#sell-section figure:hover .image::after {
+  content: "";
+  background-color: black;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.5s ease-in;
+  position: absolute;
+  z-index: 1;
+}
+
+#sell-section .shop-icon {
+  background: url("../images/add-to-cart.jpg");
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  height: 50px;
+  width: 165px;
+  z-index: 2;
+  opacity: 0;
+  background-reapat: no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#sell-section .shop-icon:hover {
+  transform: scale(1.1);
+}
+
+#sell-section figure:hover .shop-icon {
+  opacity: 1;
+}
+
+#sell-section .heart-icon {
+  background-image: url("../images/icon-heart.png");
+  position: absolute;
+  top: 122px;
+  left: 50px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  opacity: 0;
+  background-reapat: no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#sell-section .heart-icon:hover {
+  transform: scale(1.1);
+}
+
+#sell-section figure:hover .heart-icon {
+  opacity: 1;
+}
+
+#sell-section .connect-icon {
+  background-image: url("../images/icon-heart.png");
+  position: absolute;
+  top: 122px;
+  left: 106px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  opacity: 0;
+  background-reapat: no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#sell-section .connect-icon:hover {
+  transform: scale(1.1);
+}
+
+#sell-section figure:hover .connect-icon {
+  opacity: 1;
+}
+
+#sell-section .time-icon {
+  background-image: url("../images/icon-heart.png");
+  position: absolute;
+  top: 122px;
+  left: 163px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  opacity: 0;
+  background-reapat: no-repeat;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#sell-section .time-icon:hover {
+  transform: scale(1.1);
+}
+
+#sell-section figure:hover .time-icon {
+  opacity: 1;
 }
 
 #featured-products figure .main-photo {
@@ -824,6 +1040,37 @@ nav ul li a:hover {
 
 #get-in-touch .main-section .form-submit input {
   padding-right: 20px;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+#fadeinright .fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
 }
 
 /*# sourceMappingURL=style.css.map */
